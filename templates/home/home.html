@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+
+{% block title %}Home{% endblock %}
+{% block head %}Home{% endblock %}
+
+{% block url %}
+  <a href="{% url 'list' %}">District List</a>
+  <a href="{% url 'studentlist' %}">Student List</a>
+{% endblock %}

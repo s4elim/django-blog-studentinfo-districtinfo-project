@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+{% block title%}Student Info{% endblock %}
+{% block head %}Student Info{% endblock %}
+
+{% block url %}
+  <a href="{% url 'list' %}">District List</a>
+  <a href="{% url 'studentlist' %}">Student List</a>
+{% endblock %}
+
+{% block table %}
+<table>
+              <tr>
+                  <th>id</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Mobile</th>
+                  <th>Address</th>
+                  <th>Date</th>
+                  <th>Comment</th>
+
+              </tr>
+        <tr>
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.gender }}</td>
+          <td>{{ student.mobile }}</td>
+          <td>{{ student.address }}</td>
+          <td>{{ student.date_at }}</td>
+          <td>{{ student.comment }}</td>
+      </tr>
+
+</table>
+
+      {% endblock %}

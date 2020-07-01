@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title%}{% endblock %}</title>
+  <center><h2>{% block head %}{% endblock %}</h2></center>
+  <style>
+table {
+    border-collapse: collapse;
+    width: 80%;
+    position: absolute;
+  	left: 10%;
+  	top: 20%;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topnav">
+
+  <a href="{% url 'home' %}">Home</a>
+{% block url %}
+
+{% endblock %}
+  <a href="{% url 'admin:index' %}" style="padding:15px 4;float:right;">Admin Panel</a>
+</div>
+
+{% block table %}
+
+{% endblock %}
+
+{% block list %}
+
+{% endblock %}
+
+</body>
+</html>
+

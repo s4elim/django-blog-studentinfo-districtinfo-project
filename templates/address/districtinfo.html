@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+
+{% block title%}District Info{% endblock %}
+{% block head %}District Info{% endblock %}
+
+{% block url %}
+    <a href="{% url 'studentlist' %}">Student List</a>
+    <a href="{% url 'list' %}">District List</a>
+{% endblock %}
+
+{% block table %}
+<table>
+              <tr>
+                  <th>id</th>
+                  <th>Name</th>
+                  <th>Village</th>
+                  <th>Union</th>
+                  <th>Populetions</th>
+
+              </tr>
+      <tr>
+          <td>{{ districtinfo.id }}</td>
+          <td>{{ districtinfo.d_name }}</td>
+          <td>{{ districtinfo.village }}</td>
+          <td>{{ districtinfo.union }}</td>
+          <td>{{ districtinfo.populetions }}</td>
+
+      </tr>
+</table>
+      {% endblock %}
